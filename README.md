@@ -31,7 +31,7 @@ composer require --dev par/coding-standard
 
     <!-- Paths to check -->
     <file>src</file>
-    <file>tests</file>
+    <file>test</file>
 </ruleset>
 ```
 

@@ -1,0 +1,19 @@
+version: '3.7'
+
+networks:
+  backend:
+    driver: bridge
+
+services:
+  workspace:
+    build:
+      context: .docker
+      dockerfile: ./workspace/Dockerfile
+      args:
+        - TZ=Europe/Amsterdam
+    container_name: coding_standard.service.workspace
+    volumes:
+      - .:/app
+    tty: true
+    networks:
+      - backend
